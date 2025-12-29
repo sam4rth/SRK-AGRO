@@ -27,6 +27,22 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  
+  <style>
+    @media (min-width: 992px) {
+      .about .about-img {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+      }
+      .about .about-img img {
+        position: relative !important;
+        inset: auto !important;
+        height: auto !important;
+        object-fit: contain !important;
+      }
+    }
+  </style>
 
   <!-- =======================================================
   * Template Name: UpConstruction
@@ -80,11 +96,11 @@
 
       <div class="container">
 
-        <div class="row position-relative">
+        <div class="row align-items-center">
 
-          <div class="col-lg-7 about-img" data-aos="zoom-out" data-aos-delay="200"><img title="L" src="assets/img/about.png"></div>
+          <div class="col-lg-6 about-img" style="position: relative !important; min-height: auto; top: auto !important; right: auto !important;"><img title="L" src="assets/img/about.png" class="img-fluid" style="position: relative !important; width: 100%; height: auto; object-fit: contain; inset: auto !important;"></div>
 
-          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h2 class="inner-title">Tradition, Purity, and Progress</h2>
             <div class="our-story">
   <h4>Est 2020</h4>

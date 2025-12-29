@@ -42,6 +42,36 @@
         object-fit: contain !important;
       }
     }
+    .page-title {
+      position: relative;
+      overflow: hidden;
+    }
+    .page-title video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%) scale(0.8);
+      object-fit: cover;
+      z-index: 0;
+    }
+    .page-title::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    .page-title .container {
+      position: relative;
+      z-index: 2;
+    }
   </style>
 
   <!-- =======================================================
@@ -79,7 +109,10 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" style="background-image: url(assets/img/main.jpg);">
+    <div class="page-title dark-background">
+      <video autoplay loop muted playsinline>
+        <source src="assets/img/bgvideo.MOV" type="video/mp4">
+      </video>
       <div class="container position-relative">
         <h1>About</h1>
         <nav class="breadcrumbs">
